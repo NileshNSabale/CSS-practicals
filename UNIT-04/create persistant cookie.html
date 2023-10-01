@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <form action="" name="form1">
+            Enter Name :
+            <input type="text" name="tf" id="01">
+            <br><br>
+            <input type="button" onclick="createCookie()" name="" id="" value="Create cookie">
+        </form>
+        <script>
+            function createCookie(){
+                expirydate=new Date();
+                expirydate.setMonth(expirydate.getMonth()+2);
+
+                var a=document.getElementById('01').value;
+                document.cookie="Username ="+a+";expires="+expirydate.toUTCString()+";";
+                alert("Cookie created");
+                alert(document.cookie);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!-- for name and value pair -->
+<html>
+    <body>
+        <script>
+            function ReadCookie(){
+                var cookiestr=document.cookie;
+                var cookieparts=cookiestr.split('=');
+
+                if(cookieparts.length>=2){
+                    var cookiename=cookieparts[0];
+                    var cookievalue=cookieparts[1];
+
+                    alert("Cookie name="+cookiename+"\nCookie value="+cookievalue);
+                }
+                else{
+                    alert("cookie not found");
+                }
+            }
+        </script>
+        <form action="" name="f1">
+            <br><br>
+            <input type="button" value="readcookie" onclick="ReadCookie()">
+        </form>
+    </body>
+</html>
+
+
+
+
+
+
+
+<!-- 
+// form only value 
+// <html>
+//     <body>
+//         <script>
+//             function ReadCookie(){
+//                 var str=document.cookie.split('=')[1];
+//                 alert(str);
+//             } 
+//           </script>
+        <form action="" name="form1">
+            <br><br>
+            <input type="button" value="read cookie" onclick="ReadCookie()">
+        </form>
+    </body>
+</html>     
+--> 

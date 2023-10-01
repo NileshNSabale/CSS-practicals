@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <script>
+            function deleteCookie(){
+                with(document.forms.form1){
+                    expiryDate=new Date();
+                    expiryDate.setMonth(expiryDate.getMonth()-6);
+
+                    document.cookie=document.cookie+";expires="+expiryDate.toUTCString()+";";
+                    alert("Cookie deleted");
+                 
+                }
+            }
+        </script>
+        <form action="" name="form1">
+            Enter name :
+            <input type="text" name="tf" id="tf1">
+            <br><br>
+            <input type="button" onclick="deleteCookie()" value="Delete cookie">
+        </form>
+    </body>
+</html>
