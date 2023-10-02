@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <script>
+            var mywin=null;
+            function OpenWindow(){
+                mywin=window.open("","","width=300,height=300");
+            }
+            function CloseWindow(){
+                if(mywin==null)
+                    alert("window is not open");
+                else
+                    mywin.close();
+                //if you want to close main window window.close() use it
+                // window.close();
+            }
+        </script>
+        <form action="">
+            <input type="button" name="" value="open Window" onclick="OpenWindow()">
+            <input type="button" value="close window"  onclick="CloseWindow()">
+        </form>
+    </body>
+</html>
